@@ -2,19 +2,48 @@
 
 ---
 
-<article>
-  <img src="" alt="" />
-  <p></p>
-  <h2></h2>
-  <p></p>
+<article class="item-card">
+  <img src="vintage-jakke.jpg" alt="Vintage jakke" class="item-image" />
+  <div class="item-details">
+    <p class="location">København</p>
+    <h2>Vintage jakke</h2>
+    <p class="size">Str. M</p>
+  </div>
 </article>
-
 <style>
-  display: flex;
-  width: 300px;
-  height: 549px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
+  .item-card {
+    width: 300px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: "Georgia", serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 20px auto;
+  }
+
+  .item-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .item-details .location {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #000;
+  }
+
+  .item-details h2 {
+    font-family: "Arial", sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .item-details .size {
+    font-size: 16px;
+    margin-top: 8px;
+  }
 </style>

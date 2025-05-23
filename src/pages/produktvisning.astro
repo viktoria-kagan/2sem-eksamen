@@ -1,0 +1,27 @@
+---
+const data = await fetch(
+  "https://fruuiyihpenjgolbdeyc.supabase.co/rest/v1/products?Location=eq.Roskilde",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZydXVpeWlocGVuamdvbGJkZXljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjk3MzYsImV4cCI6MjA1OTg0NTczNn0.mprUmmwcPKbraQs_3YsBjAow4FzM_Hu0SjEVSkdeI0w",
+    },
+  }
+).then((res) => res.json());
+console.log(data);
+
+import Sektion6 from "../components/Sektion6.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <!-- <section class="closets">
+    {
+      data.map((closet) => {
+        return <Closets />;
+      })
+    }
+  </section> -->
+  <Sektion6 />
+</Layout>
