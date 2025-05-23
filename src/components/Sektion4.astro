@@ -1,0 +1,74 @@
+<section class="dress-rental">
+  <div class="text-content">
+    <h2>Skal du til fest?</h2>
+    <p>
+      Lej en eksklusiv kjole eller et sæt for 300 kr./uge (værdi op til 3.000
+      kr.).
+    </p>
+    <p>Afhent og aflever i showroom på Nørrebro – eller efter aftale.</p>
+    <p>Kun for medlemmer af Another Closet.</p>
+    <p>Begrænset udvalg</p>
+  </div>
+
+  <div class="dress-gallery">
+    <img src="billeder-kopi/grøn_front.webp" alt="Grøn kjole" />
+    <img src="billeder-kopi/gul_front.webp" alt="Gul kjole" />
+    <img src="billeder-kopi/glimmer_front.webp" alt="Sølv kjole" />
+    <img src="billeder-kopi/rød_front.webp" alt="Bordeaux kjole" />
+  </div>
+
+  <button class="see-all-button">SE ALLE KJOLER HER</button>
+</section>
+
+<style>
+  .dress-rental {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: "Helvetica Neue", sans-serif;
+    text-align: center;
+    color: #3b2b1c; /* brunlig tone */
+  }
+
+  .dress-rental h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .dress-rental .text-content p {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    color: #000;
+  }
+
+  .dress-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .dress-gallery img {
+    width: 100%;
+    border: 10px solid #f0eee8; /* polaroid-stil */
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .see-all-button {
+    background-color: #f0eee8;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .see-all-button:hover {
+    transform: translateY(-2px);
+  }
+</style>

@@ -1,0 +1,100 @@
+<nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="menu" id="menu">
+    <li><a href="https://www.anothercloset.dk/faq" target="_blank">FAQ</a></li>
+    <li>
+      <a href="https://www.anothercloset.dk/signup" target="_blank"
+        >Bliv medlem</a>
+    </li>
+    <li>
+      <a href="https://www.anothercloset.dk/signin" target="_blank">Log ind</a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .navbar {
+    position: relative;
+    padding: 1rem;
+    text-align: right;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bar {
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .menu li {
+    padding: 10px 20px;
+  }
+
+  .menu li a {
+    font-style: italic;
+    text-decoration: none;
+    color: black;
+  }
+
+  .menu li a:hover {
+    text-decoration: underline;
+  }
+
+  .menu li a.active {
+    font-weight: bold;
+  }
+
+  .menu.open {
+    display: block;
+  }
+
+  .menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("open");
+      menu.classList.toggle("open");
+    });
+  }
+</script>
