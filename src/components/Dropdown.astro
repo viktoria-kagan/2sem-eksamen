@@ -1,0 +1,56 @@
+<div class="dropdown-container">
+  <div class="custom-dropdown">
+    <select class="custom-select">
+      <option selected disabled>Sortér efter mærke….</option>
+      <option>Brand A</option>
+      <option>Brand B</option>
+      <option>Brand C</option>
+    </select>
+  </div>
+  <div class="custom-dropdown">
+    <select class="custom-select">
+      <option selected disabled>Sortér efter størrelse….</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+    </select>
+  </div>
+</div>
+
+<style>
+  .dropdown-container {
+    background-color: #f5f2ee;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .custom-dropdown {
+    position: relative;
+  }
+
+  .custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 10px 50px 10px 20px;
+    font-style: italic;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .custom-dropdown::after {
+    content: "⌄";
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+</style>

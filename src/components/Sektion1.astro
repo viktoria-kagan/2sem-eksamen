@@ -1,3 +1,10 @@
+<div class="scrolling-banner">
+  <div class="scrolling-text">
+    BLIV EN AF ANOTHER CLOSETS 50 NYE AMBASSADØRER • Post 2 billeder på
+    Instagram hver måned og lån et ekstra stykke tøj om måneden •
+  </div>
+</div>
+
 <section class="how-it-works">
   <h2>Dele-tøj på abonnement!<br />Sådan fungerer det?</h2>
 
@@ -64,5 +71,29 @@
     margin: 0;
     font-size: 1rem;
     line-height: 1.4;
+  }
+  .scrolling-banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #5b4630; /* din brune farve */
+    white-space: nowrap;
+    height: 3rem;
+  }
+
+  .scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 30s linear infinite;
+    color: white;
+    font-size: 2rem;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 </style>
