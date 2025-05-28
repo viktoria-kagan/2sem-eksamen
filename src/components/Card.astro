@@ -1,49 +1,53 @@
 ---
-
+const { data } = Astro.props;
+console.log(data);
 ---
 
 <article class="item-card">
-  <img src="vintage-jakke.jpg" alt="Vintage jakke" class="item-image" />
+  <img src={data.Image} alt={data.Name} class="item-image" />
   <div class="item-details">
-    <p class="location">København</p>
-    <h2>Vintage jakke</h2>
-    <p class="size">Str. M</p>
+    <p class="location">{data.Location}</p>
+    <h2>
+      {data.Name}
+    </h2>
+    <p class="size">{data.Size}</p>
   </div>
 </article>
+
 <style>
   .item-card {
-    width: 300px;
-    border: 1px solid #eee;
+    width: 110px;
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     font-family: "Georgia", serif;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin: 20px auto;
+    margin: 10px auto;
   }
 
   .item-image {
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
   }
 
   .item-details .location {
     font-style: italic;
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 10px;
+    margin-bottom: 4px;
     color: #000;
   }
 
   .item-details h2 {
     font-family: "Arial", sans-serif;
-    font-size: 24px;
+    font-size: 15px;
     font-weight: normal;
     margin: 0;
   }
 
   .item-details .size {
-    font-size: 16px;
-    margin-top: 8px;
+    font-size: 8px;
+    margin-top: 4px;
+  }
+  .item-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   }
 </style>

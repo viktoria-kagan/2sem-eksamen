@@ -5,16 +5,16 @@
     <img src="billeder/kampagne1.webp" alt="Ambassadør med tøj" />
   </div>
 
-  <p>Bliv en af vores 50 ambassadører.</p>
+  <p>Få en unik mulighed og bliv en af vores 50 ambassadører.</p>
   <p>
-    Post 2 billeder om måneden på Instagram og lån et ekstra stykke tøj om
+    Tag os på to post om måneden på Instagram og lån et ekstra stykke tøj om
     måneden.
   </p>
 
   <div class="instagram-link">
-    <span class="icon">📷</span>
-    <!-- du kan erstatte dette med et SVG-ikon -->
-    <a href="https://instagram.com" target="_blank">Se mere på instagram</a>
+    <a href="https://instagram.com" target="_blank"
+      ><img src="logo/instagram.svg" class="icon" alt="" /> Se mere på instagram</a
+    >
   </div>
 
   <button class="join-button">MELD DIG TIL HER</button>
@@ -62,15 +62,19 @@
     font-size: 1rem;
   }
 
-  .instagram-link .icon {
-    font-size: 1.2rem;
+  img.icon {
+    margin: -5px;
+    margin-right: 2px;
   }
 
   .instagram-link a {
     color: #000;
     text-decoration: none;
   }
-
+  .instagram-link :hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
   .join-button {
     background: white;
     border: none;

@@ -1,26 +1,41 @@
 <nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
+  <img src="logo/logo.webp" class="logo" alt="Logo" />
+  <div class="burgermenu">
+    <div class="menu-toggle" id="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="menu" id="menu">
+      <li>
+        <a href="https://www.anothercloset.dk/faq" target="_blank">FAQ</a>
+      </li>
+      <li>
+        <a href="https://www.anothercloset.dk/signup" target="_blank"
+          >Bliv medlem</a
+        >
+      </li>
+      <li>
+        <a href="https://www.anothercloset.dk/signin" target="_blank">Log ind</a
+        >
+      </li>
+    </ul>
   </div>
-  <ul class="menu" id="menu">
-    <li><a href="https://www.anothercloset.dk/faq" target="_blank">FAQ</a></li>
-    <li>
-      <a href="https://www.anothercloset.dk/signup" target="_blank"
-        >Bliv medlem</a>
-    </li>
-    <li>
-      <a href="https://www.anothercloset.dk/signin" target="_blank">Log ind</a>
-    </li>
-  </ul>
 </nav>
 
 <style>
+  .logo {
+    max-width: 70%;
+    justify-content: center;
+  }
+  .burgermenu {
+  }
   .navbar {
+    display: flex;
     position: relative;
     padding: 1rem;
     text-align: right;
+    justify-content: space-between;
   }
 
   .menu-toggle {
@@ -50,6 +65,7 @@
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
+    z-index: 1;
   }
 
   .menu li {
