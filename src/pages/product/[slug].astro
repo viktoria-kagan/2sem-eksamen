@@ -20,20 +20,21 @@ export async function getStaticPaths() {
 const { myData } = Astro.props;
 // console.log(myData);
 
-import Burgermenu from "../../components/Burgermenu.astro";
-
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Burgermenu />
   <div class="container">
-    <nav class="navigation">
-      <a href="/"> <img src="logo/pil.svg" alt="" /> Forside</a>
-      <a href="/produktvisning">
-        <img src="logo/pil.svg" alt="" /> Produktvisning</a
-      >
-    </nav>
+    <div class="navigation1">
+      <div class="navigation">
+        <a href="/"> <img src="../logo/pil.svg" alt="" /> Forside</a>
+      </div>
+      <div class="navigation">
+        <a href="/produktvisning">
+          <img src="../logo/pil.svg" alt="" /> Produktvisning</a
+        >
+      </div>
+    </div>
 
     <div class="product-section">
       <div class="image-column">
@@ -42,7 +43,7 @@ import Layout from "../../layouts/Layout.astro";
 
       <div class="info-column">
         <div class="owner-info">
-          <img src="owner.jpg" alt="Ejer" class="owner-photo" />
+          <img src="owner.jpg" alt="Profilbillede" class="owner-photo" />
           <p><strong>Ejer:</strong> {myData.Owner}</p>
           <p><strong>Klædeskab:</strong> {myData.Location}</p>
           <p><strong>Mærke:</strong> {myData.Brand}</p>
@@ -70,18 +71,21 @@ import Layout from "../../layouts/Layout.astro";
     margin: auto;
   }
 
-  .navigation {
+  .navigation1 {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
+    padding: 0 20px;
   }
 
-  .navigation a {
+  .navigation1 a {
     text-decoration: none;
-    color: #444;
-    font-weight: bold;
+    color: black;
   }
 
+  .navigation:hover {
+    text-decoration: underline;
+  }
   .product-section {
     display: flex;
     gap: 40px;
@@ -94,7 +98,7 @@ import Layout from "../../layouts/Layout.astro";
   }
 
   .product-image {
-    width: 100%;
+    width: 50%;
     max-width: 400px;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

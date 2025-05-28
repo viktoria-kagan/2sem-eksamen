@@ -1,0 +1,32 @@
+*{margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+main {
+  margin: 0 auto;}
+
+  :root {
+  --beige: #F3F1ED;
+    --brown: #5B4A37;
+  --font-primary:"futura-pt", sans-serif;
+}
+
+h1{ font-family: var(--font-primary);
+font-weight: 500;
+font-style: normal;
+
+}
+
+h2{ font-family: var(--font-primary);
+font-weight: 400;
+font-style: normal;
+
+}
+
+
+p, a{ font-family: var(--font-primary);
+font-weight: 300;
+font-style: normal;
+
+    
+}

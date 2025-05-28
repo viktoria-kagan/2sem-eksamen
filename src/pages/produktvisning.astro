@@ -11,20 +11,13 @@ const data = await fetch(
 ).then((res) => res.json());
 // console.log(data);
 
-import Burgermenu from "../components/Burgermenu.astro";
-
 import Sektion6 from "../components/Sektion6.astro";
 import Dropdown from "../components/Dropdown.astro";
-import Sektion7 from "../components/Sektion7.astro";
-import Footer from "../components/Footer.astro";
-
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
 
 <Layout>
-  <Burgermenu />
-
   <Sektion6 />
   <Dropdown />
   <section class="grid">
@@ -34,15 +27,13 @@ import Card from "../components/Card.astro";
       })
     }
   </section>
-  <Footer />
 </Layout>
 
 <style>
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
     max-width: 1200px;
-    margin: auto;
+    margin: 1rem;
   }
 </style>

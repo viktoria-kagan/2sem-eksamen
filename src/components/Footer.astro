@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="footer-container">
     <!-- Nyhedsbrev -->
-    <h2 class="footer-heading">Tilmeld dig vores nyhedsbrev:</h2>
+    <h1 class="footer-heading">Tilmeld dig vores nyhedsbrev:</h1>
     <input
       type="email"
       class="newsletter-input"
@@ -10,7 +10,7 @@
 
     <!-- Mere info -->
     <div class="footer-section">
-      <h3 class="section-title">Mere info:</h3>
+      <h2 class="section-title">Mere info:</h2>
       <p>Sådan fungerer Another Closet</p>
       <p>Vores Mission</p>
       <p>FAQ</p>
@@ -18,14 +18,14 @@
 
     <!-- Det med småt -->
     <div class="footer-section">
-      <h3 class="section-title">Det med småt:</h3>
+      <h2 class="section-title">Det med småt:</h2>
       <p>Handelsbetingelser</p>
       <p>Cookies- og privatlivspolitik</p>
     </div>
 
     <!-- Kontakt -->
     <div class="footer-section">
-      <h3 class="section-title">Kontakt:</h3>
+      <h2 class="section-title">Kontakt:</h2>
       <p>Hej@anothercloset.dk</p>
       <p>Tønsborgvej 104, 4000 Roskilde</p>
       <p>CVR nr.: 44995875</p>
@@ -35,10 +35,12 @@
     <div class="footer-bottom">
       <p class="footer-copy">© 2023 Another Closet</p>
       <div class="social-icons">
-        <a href="#"
+        <a href="https://www.instagram.com/anothercloset.dk/" target="_blank"
           ><img src="/public/logo/insta_footer.svg" alt="Instagram" /></a
         >
-        <a href="#"><img src="/public/logo/facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.facebook.com/anotherclosetdanmark/" target="_blank"
+          ><img src="/public/logo/facebook.svg" alt="Facebook" /></a
+        >
       </div>
     </div>
   </div>
@@ -46,9 +48,8 @@
 
 <style>
   .footer-container {
-    background-color: #5c452e;
+    background-color: var(--brown);
     color: white;
-    font-family: "Georgia", serif;
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
@@ -57,26 +58,27 @@
   .footer-heading {
     font-style: italic;
     margin-bottom: 1rem;
+    font-size: 20px;
   }
 
   .newsletter-input {
     width: 100%;
-    padding: 1rem;
+    padding: 8px;
     border-radius: 2rem;
     border: none;
     margin-bottom: 2rem;
     font-style: italic;
-    font-family: "Arial", sans-serif;
-    color: #333;
   }
 
   .footer-section {
     margin-bottom: 1.5rem;
+    font-size: 15px;
   }
 
   .section-title {
     font-style: italic;
     margin-bottom: 0.5rem;
+    font-size: 20px;
   }
 
   .footer-bottom {
@@ -88,6 +90,7 @@
 
   .footer-copy {
     font-style: italic;
+    font-size: 10px;
   }
 
   .social-icons img {
