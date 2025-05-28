@@ -1,108 +1,97 @@
-<div class="footer-col">
-  <h4>Det med småt:</h4>
-  <ul>
-    <li><a href="#">Handelsbetingelser</a></li>
-    <li><a href="#">Cookies- og privatlivspolitik</a></li>
-  </ul>
-</div>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Nyhedsbrev -->
+    <h2 class="footer-heading">Tilmeld dig vores nyhedsbrev:</h2>
+    <input
+      type="email"
+      class="newsletter-input"
+      placeholder="Skriv din e-mail her..."
+    />
 
-<div class="footer-col">
-  <h4>Kontakt:</h4>
-  <p>Hej@anothercloset.dk</p>
-  <p>Tønsborgvej 104, 4000 Roskilde</p>
-  <p>CVR nr.: 44995875</p>
-</div>
+    <!-- Mere info -->
+    <div class="footer-section">
+      <h3 class="section-title">Mere info:</h3>
+      <p>Sådan fungerer Another Closet</p>
+      <p>Vores Mission</p>
+      <p>FAQ</p>
+    </div>
 
-<div class="footer-bottom">
-  <p>© 2023 Another Closet</p>
-  <div class="social-icons">
-    <a href="#"><img src="logo/instagram.svg" alt="Instagram" /></a>
-    <a href="#"><img src="logo/facebook.svg" alt="Facebook" /></a>
+    <!-- Det med småt -->
+    <div class="footer-section">
+      <h3 class="section-title">Det med småt:</h3>
+      <p>Handelsbetingelser</p>
+      <p>Cookies- og privatlivspolitik</p>
+    </div>
+
+    <!-- Kontakt -->
+    <div class="footer-section">
+      <h3 class="section-title">Kontakt:</h3>
+      <p>Hej@anothercloset.dk</p>
+      <p>Tønsborgvej 104, 4000 Roskilde</p>
+      <p>CVR nr.: 44995875</p>
+    </div>
+
+    <!-- Footer bund -->
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2023 Another Closet</p>
+      <div class="social-icons">
+        <a href="#"
+          ><img src="/public/logo/insta_footer.svg" alt="Instagram" /></a
+        >
+        <a href="#"><img src="/public/logo/facebook.svg" alt="Facebook" /></a>
+      </div>
+    </div>
   </div>
-</div>
-
-<!-- <script src="script.js"></script> -->
+</footer>
 
 <style>
-  .site-footer {
-    margin-top: 3rem;
-    background-color: #5b4630;
+  .footer-container {
+    background-color: #5c452e;
     color: white;
-    padding: 3rem 1rem;
     font-family: "Georgia", serif;
-    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
-  .newsletter h3 {
+  .footer-heading {
     font-style: italic;
-    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
 
-  .newsletter input[type="email"] {
-    width: 80%;
-    max-width: 400px;
-    padding: 0.75rem 1rem;
+  .newsletter-input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
     border: none;
-    border-radius: 999px;
-    font-family: "Helvetica Neue", sans-serif;
-    font-size: 1rem;
     margin-bottom: 2rem;
+    font-style: italic;
+    font-family: "Arial", sans-serif;
+    color: #333;
   }
 
-  .footer-columns {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    text-align: left;
-    max-width: 800px;
-    margin-inline: auto;
+  .footer-section {
+    margin-bottom: 1.5rem;
   }
 
-  .footer-col h4 {
+  .section-title {
     font-style: italic;
     margin-bottom: 0.5rem;
-  }
-
-  .footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .footer-col li {
-    margin: 0.3rem 0;
-  }
-
-  .footer-col a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .footer-col a:hover {
-    text-decoration: underline;
-  }
-
-  .footer-col p {
-    margin: 0.5rem 0;
-    font-family: "Helvetica Neue", sans-serif;
   }
 
   .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
     margin-top: 2rem;
-    font-size: 0.9rem;
+  }
+
+  .footer-copy {
     font-style: italic;
   }
 
-  .social-icons a img {
-    height: 24px;
+  .social-icons img {
+    width: 24px;
     margin-left: 1rem;
   }
 </style>

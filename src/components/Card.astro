@@ -3,16 +3,18 @@ const { data } = Astro.props;
 console.log(data);
 ---
 
-<article class="item-card">
-  <img src={data.Image} alt={data.Name} class="item-image" />
-  <div class="item-details">
-    <p class="location">{data.Location}</p>
-    <h2>
-      {data.Name}
-    </h2>
-    <p class="size">{data.Size}</p>
-  </div>
-</article>
+<a href={`product/${data.slug}`}>
+  <article class="item-card">
+    <img src={data.Image} alt={data.Name} class="item-image" />
+    <div class="item-details">
+      <p class="location">{data.Location}</p>
+      <h2>
+        {data.Name}
+      </h2>
+      <p class="size">{data.Size}</p>
+    </div>
+  </article></a
+>
 
 <style>
   .item-card {

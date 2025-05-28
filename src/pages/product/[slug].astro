@@ -1,0 +1,119 @@
+---
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://fruuiyihpenjgolbdeyc.supabase.co/rest/v1/products?Location=eq.København",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZydXVpeWlocGVuamdvbGJkZXljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjk3MzYsImV4cCI6MjA1OTg0NTczNn0.mprUmmwcPKbraQs_3YsBjAow4FzM_Hu0SjEVSkdeI0w",
+      },
+    }
+  ).then((response) => response.json());
+  return data.map((product) => {
+    return {
+      params: { slug: product.slug },
+      props: { myData: product },
+    };
+  });
+}
+const { myData } = Astro.props;
+// console.log(myData);
+
+import Burgermenu from "../../components/Burgermenu.astro";
+
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <Burgermenu />
+  <div class="container">
+    <nav class="navigation">
+      <a href="/"> <img src="logo/pil.svg" alt="" /> Forside</a>
+      <a href="/produktvisning">
+        <img src="logo/pil.svg" alt="" /> Produktvisning</a
+      >
+    </nav>
+
+    <div class="product-section">
+      <div class="image-column">
+        <img src={myData.Image} alt="Vest" class="product-image" />
+      </div>
+
+      <div class="info-column">
+        <div class="owner-info">
+          <img src="owner.jpg" alt="Ejer" class="owner-photo" />
+          <p><strong>Ejer:</strong> {myData.Owner}</p>
+          <p><strong>Klædeskab:</strong> {myData.Location}</p>
+          <p><strong>Mærke:</strong> {myData.Brand}</p>
+          <p><strong>Stand:</strong> {myData.Condition}</p>
+          <p><strong>Type:</strong> {myData.Type}</p>
+          <p><strong>Størrelse:</strong> {myData.Size}</p>
+          <p><strong>Fit:</strong> {myData.Fit}</p>
+          <p><strong>Vask:</strong> {myData.Wash}</p>
+        </div>
+
+        <div class="comment-section">
+          <p><strong>Kommentar:</strong></p>
+          <p>
+            T-shirten er meget oversized i fit og passer derfor alt mellem str.
+            S-L.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+<style>
+  .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .navigation a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+  }
+
+  .product-section {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .image-column {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-column {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .owner-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .comment-section {
+    margin-top: 30px;
+  }
+</style>
