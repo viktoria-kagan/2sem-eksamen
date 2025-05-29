@@ -43,7 +43,11 @@ import Layout from "../../layouts/Layout.astro";
 
       <div class="info-column">
         <div class="owner-info">
-          <img src="owner.jpg" alt="Profilbillede" class="owner-photo" />
+          <img
+            src={myData.Profileimage}
+            alt="Profilbillede"
+            class="owner-photo"
+          />
           <p><strong>Ejer:</strong> {myData.Owner}</p>
           <p><strong>Klædeskab:</strong> {myData.Location}</p>
           <p><strong>Mærke:</strong> {myData.Brand}</p>
@@ -57,8 +61,7 @@ import Layout from "../../layouts/Layout.astro";
         <div class="comment-section">
           <p><strong>Kommentar:</strong></p>
           <p>
-            T-shirten er meget oversized i fit og passer derfor alt mellem str.
-            S-L.
+            {myData.Comment}
           </p>
         </div>
       </div>
