@@ -8,9 +8,10 @@
 </div>
 
 <section class="how-it-works">
-  <h1>Dele-tøj på abonnement!</h1>
-  <h2>Sådan fungerer det?</h2>
-
+  <div class="overskrift">
+    <h1>Dele-tøj på abonnement</h1>
+    <h2>Sådan fungerer det</h2>
+  </div>
   <div class="how-it-works-image">
     <img src="billeder/how-to.webp" alt="Kvinde vælger jakke" />
   </div>
@@ -39,14 +40,10 @@
     text-align: center;
     color: var(--brown);
     padding: 2rem 1rem;
-    max-width: 700px;
     margin: 0 auto;
   }
-
-  .how-it-works h2 {
-    font-size: 2rem;
+  .overskrift {
     margin-bottom: 1.5rem;
-    font-weight: bold;
   }
 
   .how-it-works-image img {
@@ -99,6 +96,65 @@
     }
     100% {
       transform: translateX(-100%);
+    }
+  }
+  @media (min-width: 800px) {
+    .scrolling-banner {
+      height: 4rem;
+    }
+    .scrolling-text {
+      font-size: 2rem;
+    }
+    .how-it-works {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 4rem;
+    }
+    .how-it-works > :nth-child(2) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .how-it-works > :nth-child(1) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .how-it-works > :nth-child(3) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .steps {
+      margin-top: -25rem;
+    }
+
+    .step p {
+      font-size: larger;
+    }
+    .step-number {
+      font-size: 2rem;
+    }
+
+    .overskrift {
+      font-size: x-large;
+      margin-bottom: 2rem;
+    }
+    .how-it-works-image img {
+      max-width: 80%;
+    }
+  }
+  @media (min-width: 1100px) {
+    .overskrift {
+      font-size: xx-large;
+    }
+    .step p {
+      font-size: xx-large;
+    }
+    .step-number {
+      font-size: 4rem;
+    }
+    .steps {
+      margin-top: -40rem;
     }
   }
 </style>

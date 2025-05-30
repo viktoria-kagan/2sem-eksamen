@@ -1,4 +1,4 @@
-<section class="community-section">
+<section class="community-section" id="closets">
   <h1>Hvor bor du?</h1>
   <h2>Find dit lokale tøjfællesskab her:</h2>
   <div class="location-buttons">
@@ -29,7 +29,6 @@
 
 <style>
   .community-section {
-    max-width: 500px;
     margin: auto;
     padding: 40px 20px;
     text-align: center;
@@ -37,11 +36,12 @@
 
   .community-section h2,
   h1 {
-    font-size: 24px;
     color: var(--brown);
-    margin-bottom: 20px;
     text-align: left;
     padding-left: 2rem;
+  }
+  h2 {
+    margin-bottom: 2rem;
   }
 
   .location-buttons {
@@ -92,5 +92,41 @@
     transition: all 0.3s ease;
     border: 4px solid #000;
     font-weight: 800;
+  }
+  @media (min-width: 800px) {
+    .community-section {
+      max-width: 70%;
+
+      margin: 4rem;
+    }
+    .location-buttons {
+      justify-content: left;
+      margin-left: 2rem;
+      font-size: larger;
+    }
+    h1 {
+      font-size: xx-large;
+    }
+    h2 {
+      font-size: xx-large;
+    }
+    .community-text p {
+      font-size: x-large;
+      margin-left: 1rem;
+    }
+    .cta-button {
+      margin-left: -12rem;
+    }
+  }
+  @media (min-width: 1100px) {
+    h1 {
+      font-size: xxx-large;
+    }
+    h2 {
+      font-size: xxx-large;
+    }
+    .location-buttons {
+      font-size: xx-large;
+    }
   }
 </style>

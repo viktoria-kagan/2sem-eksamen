@@ -21,18 +21,22 @@ import Card from "../components/Card.astro";
   <div class="dropdown-container">
     <div class="custom-dropdown">
       <select id="customSelect">
-        <option selected disabled>Sortér efter mærke….</option>
-        <option>Brand A</option>
-        <option>Brand B</option>
-        <option>Brand C</option>
+        <option selected disabled>Sortér efter type….</option>
+        <option value="Kjoler">Kjoler</option>
+        <option value="Overdele">Overdele</option>
+        <option value="Underdele">Underdele</option>
+        <option value="Overtøj">Overtøj</option>
+        <option value="Tilbehør">Tilbehør</option>
       </select>
     </div>
     <div class="custom-dropdown">
       <select id="customSelect">
         <option selected disabled>Sortér efter størrelse….</option>
-        <option>Small</option>
-        <option>Medium</option>
-        <option>Large</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
       </select>
     </div>
   </div>

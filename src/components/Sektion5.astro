@@ -1,13 +1,14 @@
 <section class="testimonial-section">
-  <blockquote>
-    “For mig er det en del af et overordnet livsvalg, der handler om at arbejde
-    mindre, bo mindre og forbruge mindre. Another Closet bliver en mulighed for
-    at lege og eksperimentere med tøj i et sjovt, rummeligt og bæredygtigt
-    fællesskab uden at skulle løbe rundt i tilværelsen for at have penge nok til
-    det hele.”
-  </blockquote>
-  <p class="author">Lotte, medlem roskilde</p>
-
+  <div class="tekst">
+    <blockquote>
+      “For mig er det en del af et overordnet livsvalg, der handler om at
+      arbejde mindre, bo mindre og forbruge mindre. Another Closet bliver en
+      mulighed for at lege og eksperimentere med tøj i et sjovt, rummeligt og
+      bæredygtigt fællesskab uden at skulle løbe rundt i tilværelsen for at have
+      penge nok til det hele.”
+    </blockquote>
+    <p class="author">Lotte, medlem roskilde</p>
+  </div>
   <div class="testimonial-image">
     <img src="billeder/medlem.webp" alt="Lotte og anden medlem" />
     <div class="badge">
@@ -18,7 +19,6 @@
 
 <style>
   .testimonial-section {
-    max-width: 600px;
     margin: 0 auto;
     padding: 2rem 1rem;
     text-align: center;
@@ -49,7 +49,6 @@
     transform: rotate(-3deg);
     border: 10px solid var(--beige);
     border-bottom: 40px solid var(--beige);
-
     box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
@@ -64,5 +63,37 @@
     bottom: -60px;
     left: 10px;
     width: 80px;
+  }
+  @media (min-width: 800px) {
+    .testimonial-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .testimonial-section > :nth-child(1) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .testimonial-section blockquote {
+      font-size: x-large;
+    }
+    .testimonial-section .author {
+      font-size: larger;
+    }
+    .tekst {
+      margin-right: 4rem;
+      margin-top: -25rem;
+    }
+
+    .testimonial-image {
+      transform: rotate(0);
+      margin-left: 4rem;
+      width: 60%;
+    }
+
+    .testimonial-image .badge {
+      bottom: 20px;
+      left: 200px;
+      width: 100px;
+    }
   }
 </style>
