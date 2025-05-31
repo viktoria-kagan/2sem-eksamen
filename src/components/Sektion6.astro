@@ -3,10 +3,7 @@
 
   <div class="event-content">
     <div class="event-image">
-      <img src="billeder/jeans_hands.webp" alt="Person holder jeans" />
-      <div class="badge">
-        <img src="billeder/stempel.webp" alt="Stempel" />
-      </div>
+      <img src="billeder/ny buks.webp" alt="Person holder jeans" />
     </div>
 
     <div class="event-text">
@@ -50,8 +47,6 @@
     text-decoration: underline;
   }
   .event-content {
-    display: flex;
-    flex-direction: row;
     align-items: flex-start;
     gap: 30px;
     flex-wrap: wrap;
@@ -59,23 +54,15 @@
 
   .event-image {
     position: relative;
-    width: 100%;
+    width: 60%;
     flex-shrink: 0;
     padding: 0 20px;
-    align-items: center;
+    margin-left: 2rem;
   }
 
   .event-image img {
     width: 100%;
     height: auto;
-  }
-
-  .badge {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 14px;
   }
 
   .event-text {
@@ -84,13 +71,11 @@
   }
 
   .event-text h1 {
-    font-size: 28px;
     color: var(--brown);
     margin-bottom: 20px;
   }
 
   .event-text p {
-    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 16px;
   }
@@ -103,8 +88,31 @@
     .event-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+    .event-image {
+      width: 100%;
+    }
+    .event-text h1 {
+      font-size: xx-large;
+    }
+
+    .event-text p {
+      font-size: large;
     }
   }
   @media (min-width: 1100px) {
+    .event-image {
+      margin-left: 6rem;
+      width: 70%;
+    }
+    .event-text h1 {
+      font-size: xxx-large;
+    }
+
+    .event-text p {
+      font-size: x-large;
+    }
   }
 </style>

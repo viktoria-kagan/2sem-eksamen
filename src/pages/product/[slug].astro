@@ -21,6 +21,25 @@ const { myData } = Astro.props;
 // console.log(myData);
 
 import Layout from "../../layouts/Layout.astro";
+
+// Dette skal placeres i toppen sammen med den anden import
+import Card from "../../components/Card.astro";
+
+const allProducts = await fetch(
+  "https://fruuiyihpenjgolbdeyc.supabase.co/rest/v1/products?Location=eq.København",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZydXVpeWlocGVuamdvbGJkZXljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjk3MzYsImV4cCI6MjA1OTg0NTczNn0.mprUmmwcPKbraQs_3YsBjAow4FzM_Hu0SjEVSkdeI0w",
+    },
+  }
+).then((res) => res.json());
+
+// 👇 Filtrér produkter i samme størrelse, og ekskludér det viste produkt
+const relatedProducts = allProducts.filter(
+  (product) => product.Size === myData.Size && product.slug !== myData.slug
+);
 ---
 
 <Layout>
@@ -66,14 +85,22 @@ import Layout from "../../layouts/Layout.astro";
         </div>
       </div>
     </div>
+    <h2 class="related-title">Andre produkter i størrelse {myData.Size}</h2>
+
+    {
+      relatedProducts.length > 0 ? (
+        <section class="grid">
+          {relatedProducts.map((product) => (
+            <Card data={product} />
+          ))}
+        </section>
+      ) : (
+        <p class="no-results">Der er ikke flere items i din størrelse.</p>
+      )
+    }
   </div>
 </Layout>
 <style>
-  .container {
-    max-width: 1000px;
-    margin: auto;
-  }
-
   .navigation1 {
     display: flex;
     gap: 20px;
@@ -113,7 +140,6 @@ import Layout from "../../layouts/Layout.astro";
     position: absolute;
     z-index: 2;
     flex: 2;
-    min-width: 200px;
     text-align: right;
     padding-right: 2rem;
     line-height: 1.6;
@@ -130,5 +156,33 @@ import Layout from "../../layouts/Layout.astro";
 
   .comment-section {
     margin-top: 30px;
+  }
+  .related-title {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .no-results {
+    text-align: center;
+    font-style: italic;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+  @media (min-width: 800px) {
+    .info-column {
+      position: relative;
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+  }
+
+  @media (min-width: 1100px) {
   }
 </style>

@@ -53,7 +53,6 @@ import Card from "../components/Card.astro";
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    max-width: 1200px;
     margin: 1rem;
   }
   .dropdown-container {
@@ -89,5 +88,30 @@ import Card from "../components/Card.astro";
     right: 20px;
     transform: translateY(-50%);
     pointer-events: none;
+  }
+  @media (min-width: 800px) {
+    #customSelect {
+      padding: 10px 30px 10px 15px;
+      font-size: 1.1rem;
+    }
+    .dropdown-container {
+      gap: 20px;
+    }
+    .grid {
+      margin: 2rem;
+      gap: 8rem;
+      margin-right: 8rem;
+    }
+  }
+  @media (min-width: 1100px) {
+    .dropdown-container {
+      gap: 40px;
+    }
+    .grid {
+      margin-left: 4rem;
+      gap: 10rem;
+      margin-right: 14rem;
+      margin-top: 4rem;
+    }
   }
 </style>
