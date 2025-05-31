@@ -1,0 +1,118 @@
+<section class="event-intro">
+  <a href="/" class="back-link"> <img src="logo/pil.svg" alt="" /> Forside</a>
+
+  <div class="event-content">
+    <div class="event-image">
+      <img src="billeder/ny buks.webp" alt="Person holder jeans" />
+    </div>
+
+    <div class="event-text">
+      <h1>Velkommen til tøjfællesskabet i København</h1>
+      <p>
+        Kom og lån tre lækre forårssty­les – og lad andre medlemmer få glæde af
+        det tøj, du ikke længere bruger!
+        <br />
+        Alle er velkomne, og du deltager bare i det tidsrum, det passer ind i din
+        dag!
+      </p>
+      <p class="event-dates">
+        <strong
+          >TORSDAG 22. MAJ KL 17.00 - 20.30 &<br />
+          TORSDAG 26. JUNI KL. 17.00 - 19.00</strong
+        ><br />
+        Guldbergsgade 29 D, igennem butikken Res Res
+      </p>
+      <p>
+        Der er åben for selvbetjening for medlemmer i vores showroom hver dag
+        mellem kl. 11 - 18.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .event-intro {
+    padding: 0px 20px;
+    margin: auto;
+  }
+
+  .back-link {
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: black;
+  }
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  .event-content {
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .event-image {
+    position: relative;
+    width: 60%;
+    flex-shrink: 0;
+    padding: 0 20px;
+    margin-left: 2rem;
+  }
+
+  .event-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .event-text {
+    flex: 1;
+    margin: 1rem;
+  }
+
+  .event-text h1 {
+    color: var(--brown);
+    margin-bottom: 20px;
+  }
+
+  .event-text p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .event-dates {
+    color: var(--brown);
+    font-weight: bold;
+  }
+  @media (min-width: 800px) {
+    .event-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+    .event-image {
+      width: 100%;
+    }
+    .event-text h1 {
+      font-size: xx-large;
+    }
+
+    .event-text p {
+      font-size: large;
+    }
+  }
+  @media (min-width: 1100px) {
+    .event-image {
+      margin-left: 6rem;
+      width: 70%;
+    }
+    .event-text h1 {
+      font-size: xxx-large;
+    }
+
+    .event-text p {
+      font-size: x-large;
+    }
+  }
+</style>

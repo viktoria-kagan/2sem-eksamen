@@ -1,108 +1,163 @@
-<div class="footer-col">
-  <h4>Det med småt:</h4>
-  <ul>
-    <li><a href="#">Handelsbetingelser</a></li>
-    <li><a href="#">Cookies- og privatlivspolitik</a></li>
-  </ul>
-</div>
+<footer class="footer">
+  <div class="footer-container">
+    <h1>Tak, fordi du tænker bæredygtigt!</h1>
+    <!-- Nyhedsbrev -->
+    <div class="footer_grid">
+      <div>
+        <h2 class="footer-heading">Tilmeld dig vores nyhedsbrev:</h2>
+        <input
+          type="email"
+          class="newsletter-input"
+          placeholder="Skriv din e-mail her..."
+        />
+      </div>
+      <!-- Mere info -->
 
-<div class="footer-col">
-  <h4>Kontakt:</h4>
-  <p>Hej@anothercloset.dk</p>
-  <p>Tønsborgvej 104, 4000 Roskilde</p>
-  <p>CVR nr.: 44995875</p>
-</div>
+      <div class="footer-section">
+        <h2 class="section-title">Mere info:</h2>
+        <p>
+          <a href="https://www.anothercloset.dk/getstarted"
+            >Sådan fungerer Another Closet</a
+          >
+        </p>
+        <p><a href="https://www.anothercloset.dk/mission">Vores Mission</a></p>
+        <p><a href="https://www.anothercloset.dk/faq">FAQ</a></p>
+      </div>
 
-<div class="footer-bottom">
-  <p>© 2023 Another Closet</p>
-  <div class="social-icons">
-    <a href="#"><img src="path/to/instagram-icon.svg" alt="Instagram" /></a>
-    <a href="#"><img src="path/to/facebook-icon.svg" alt="Facebook" /></a>
+      <!-- Det med småt -->
+      <div class="footer-section">
+        <h2 class="section-title">Det med småt:</h2>
+        <p>
+          <a href="https://www.anothercloset.dk/terms">Handelsbetingelser</a>
+        </p>
+        <p>
+          <a href="https://www.anothercloset.dk/privacy"
+            >Cookies- og privatlivspolitik</a
+          >
+        </p>
+      </div>
+      <!-- Kontakt -->
+      <div class="footer-section">
+        <h2 class="section-title">Kontakt:</h2>
+        <p>Hej@anothercloset.dk</p>
+        <p>Tønsborgvej 104, 4000 Roskilde</p>
+        <p>CVR nr.: 44995875</p>
+      </div>
+    </div>
+
+    <!-- Footer bund -->
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2023 Another Closet</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/anothercloset.dk/" target="_blank"
+          ><img src="/logo/insta_footer.svg" alt="Instagram" /></a
+        >
+        <a href="https://www.facebook.com/anotherclosetdanmark/" target="_blank"
+          ><img src="/logo/facebook.svg" alt="Facebook" /></a
+        >
+      </div>
+    </div>
   </div>
-</div>
-
-<script src="script.js"></script>
+</footer>
 
 <style>
-  .site-footer {
-    margin-top: 3rem;
-    background-color: #5b4630;
+  h1 {
+    padding: 2rem 0rem;
+  }
+  .footer-container {
+    background-color: var(--brown);
     color: white;
-    padding: 3rem 1rem;
-    font-family: "Georgia", serif;
-    text-align: center;
+    padding: 2rem;
+    margin: 0 auto;
   }
 
-  .newsletter h3 {
+  .footer-heading {
     font-style: italic;
-    font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-size: 20px;
   }
 
-  .newsletter input[type="email"] {
-    width: 80%;
-    max-width: 400px;
-    padding: 0.75rem 1rem;
+  .newsletter-input {
+    width: 15rem;
+    padding: 8px;
+    border-radius: 2rem;
     border: none;
-    border-radius: 999px;
-    font-family: "Helvetica Neue", sans-serif;
-    font-size: 1rem;
     margin-bottom: 2rem;
-  }
-
-  .footer-columns {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    text-align: left;
-    max-width: 800px;
-    margin-inline: auto;
-  }
-
-  .footer-col h4 {
     font-style: italic;
-    margin-bottom: 0.5rem;
   }
 
-  .footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .footer-section {
+    margin-bottom: 1.5rem;
+    font-size: 15px;
   }
-
-  .footer-col li {
-    margin: 0.3rem 0;
-  }
-
-  .footer-col a {
-    color: white;
+  .footer-section a {
     text-decoration: none;
+    color: white;
   }
 
-  .footer-col a:hover {
+  .footer-section a:hover {
     text-decoration: underline;
   }
-
-  .footer-col p {
-    margin: 0.5rem 0;
-    font-family: "Helvetica Neue", sans-serif;
+  .section-title {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    font-size: 20px;
   }
 
   .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
     margin-top: 2rem;
-    font-size: 0.9rem;
-    font-style: italic;
   }
 
-  .social-icons a img {
-    height: 24px;
+  .footer-copy {
+    font-style: italic;
+    font-size: 10px;
+  }
+
+  .social-icons img {
+    width: 24px;
     margin-left: 1rem;
+  }
+  @media (min-width: 800px) {
+    .footer_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    .footer_grid > :nth-child(1) {
+      grid-column: 4;
+      grid-row: 1;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    h1 {
+      font-size: xxx-large;
+    }
+    .footer-copy {
+      font-size: large;
+    }
+    .social-icons img {
+      width: 30px;
+    }
+    .section-title {
+      font-size: 30px;
+    }
+    .footer-section {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .footer-heading {
+      font-size: 30px;
+    }
+
+    .newsletter-input {
+      width: 20rem;
+      font-size: large;
+    }
   }
 </style>

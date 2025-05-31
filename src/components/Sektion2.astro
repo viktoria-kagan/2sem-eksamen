@@ -1,15 +1,15 @@
-<section class="community-section">
-  <h2>Find dit tøjfællesskab:</h2>
-
+<section class="community-section" id="closets">
+  <h1>Hvor bor du?</h1>
+  <h2>Find dit lokale tøjfællesskab her:</h2>
   <div class="location-buttons">
-    <button>RINGKØBING</button>
-    <button>LYNGBY</button>
-    <button>ROSKILDE</button>
-    <button>NØRREBRO</button>
-    <button>AAU KØBENHAVN</button>
-    <button>KEA</button>
-    <button>FREDERICIA</button>
-    <button>RIBE</button>
+    <a href="/produktvisning">RINGKØBING</a>
+    <a href="/produktvisning">LYNGBY</a>
+    <a href="/produktvisning">ROSKILDE</a>
+    <a href="/produktvisning">NØRREBRO</a>
+    <a href="/produktvisning">AAU KØBENHAVN</a>
+    <a href="/produktvisning">KEA</a>
+    <a href="/produktvisning">FREDERICIA</a>
+    <a href="/produktvisning">RIBE</a>
   </div>
 
   <div class="community-text">
@@ -21,70 +21,115 @@
       Skriv dig på ventelisten, og vær den første til at få besked, når vi åbner
       i nærheden af dig, eller hør hvordan, du starter dit eget tøjfællesskab.
     </p>
+    <a href="/start-dit-faellesskab.html" class="cta-button"
+      >Start dit eget tøjfællesskab</a
+    >
   </div>
-
-  <button class="outline-button">Start dit eget tøjfællesskab</button>
 </section>
 
 <style>
   .community-section {
-    padding: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
+    padding: 40px 20px;
     text-align: center;
-    font-family: "Helvetica Neue", sans-serif;
-    color: #4e3a26; /* brun farve */
   }
 
-  .community-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
+  .community-section h2,
+  h1 {
+    color: var(--brown);
+    text-align: left;
+    padding-left: 2rem;
+  }
+  h2 {
+    margin-bottom: 2rem;
   }
 
   .location-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: 12px;
+    margin-bottom: 30px;
   }
 
-  .location-buttons button {
-    background-color: #f1eee8;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+  .location-buttons a {
+    background-color: var(--beige);
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 4px;
+    text-decoration: none;
     font-weight: bold;
-    transition: transform 0.2s ease;
+    display: inline-block;
+    cursor: pointer;
   }
 
-  .location-buttons button:hover {
+  .location-buttons a:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .community-text {
+  .community-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding: 0px 20px;
     text-align: left;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    color: black;
   }
 
-  .outline-button {
+  .cta-button {
+    display: inline-block;
+    padding: 12px 20px;
     border: 2px solid #000;
-    background: none;
-    padding: 0.75rem 1.25rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 999px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
   }
 
-  .outline-button:hover {
-    background-color: #f1eee8;
+  .cta-button:hover {
+    transition: all 0.3s ease;
+    border: 4px solid #000;
+    font-weight: 800;
+  }
+  @media (min-width: 800px) {
+    .community-section {
+      max-width: 70%;
+
+      margin: 4rem;
+    }
+    .location-buttons {
+      justify-content: left;
+      margin-left: 2rem;
+      font-size: larger;
+    }
+    h1 {
+      font-size: xx-large;
+    }
+    h2 {
+      font-size: xx-large;
+    }
+    .community-text p {
+      font-size: x-large;
+      margin-left: 1rem;
+    }
+    .cta-button {
+      margin-left: -12rem;
+    }
+  }
+  @media (min-width: 1100px) {
+    h1 {
+      font-size: xxx-large;
+    }
+    h2 {
+      font-size: xxx-large;
+    }
+    .location-buttons {
+      font-size: xx-large;
+    }
+    .cta-button {
+      font-size: 20px;
+    }
   }
 </style>

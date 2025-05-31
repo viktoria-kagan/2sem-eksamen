@@ -1,0 +1,117 @@
+---
+const data = await fetch(
+  "https://fruuiyihpenjgolbdeyc.supabase.co/rest/v1/products?Location=eq.København",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZydXVpeWlocGVuamdvbGJkZXljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjk3MzYsImV4cCI6MjA1OTg0NTczNn0.mprUmmwcPKbraQs_3YsBjAow4FzM_Hu0SjEVSkdeI0w",
+    },
+  }
+).then((res) => res.json());
+// console.log(data);
+
+import Sektion6 from "../components/Sektion6.astro";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout>
+  <Sektion6 />
+  <div class="dropdown-container">
+    <div class="custom-dropdown">
+      <select id="customSelect">
+        <option selected disabled>Sortér efter type….</option>
+        <option value="Kjoler">Kjoler</option>
+        <option value="Overdele">Overdele</option>
+        <option value="Underdele">Underdele</option>
+        <option value="Overtøj">Overtøj</option>
+        <option value="Tilbehør">Tilbehør</option>
+      </select>
+    </div>
+    <div class="custom-dropdown">
+      <select id="customSelect">
+        <option selected disabled>Sortér efter størrelse….</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+    </div>
+  </div>
+  <section class="grid">
+    {
+      data.map((product) => {
+        return <Card data={product} />;
+      })
+    }
+  </section>
+</Layout>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    margin: 1rem;
+  }
+  .dropdown-container {
+    background-color: var(--beige);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .custom-dropdown {
+    position: relative;
+  }
+
+  #customSelect {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 3px 10px 3px 8px;
+    font-style: italic;
+    font-size: 0.7rem;
+    cursor: pointer;
+  }
+
+  .custom-dropdown::after {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  @media (min-width: 800px) {
+    #customSelect {
+      padding: 10px 30px 10px 15px;
+      font-size: 1.1rem;
+    }
+    .dropdown-container {
+      gap: 20px;
+    }
+    .grid {
+      margin: 2rem;
+      gap: 8rem;
+      margin-right: 8rem;
+    }
+  }
+  @media (min-width: 1100px) {
+    .dropdown-container {
+      gap: 40px;
+    }
+    .grid {
+      margin-left: 4rem;
+      gap: 10rem;
+      margin-right: 14rem;
+      margin-top: 4rem;
+    }
+  }
+</style>

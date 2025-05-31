@@ -1,45 +1,97 @@
-<section class="ambassador-section">
-  <h2>Bliv ambassadør for<br />Another Closet</h2>
-
-  <div class="ambassador-image">
-    <img src="billeder-kopi/kampagne1.webp" alt="Ambassadør med tøj" />
+<section class="ambassador-section" id="ambassador-section">
+  <div class="overskrift">
+    <h2>Bliv ambassadør for<br />Another Closet</h2>
+  </div>
+  <div class="polaroid-wrapper">
+    <div class="polaroid">
+      <img src="billeder/kampagne1.webp" alt="Billede 1" />
+    </div>
+    <div class="polaroid">
+      <img src="billeder/kampagne2.webp" alt="Billede 2" />
+    </div>
   </div>
 
-  <p>Bliv en af vores 50 ambassadører.</p>
-  <p>
-    Post 2 billeder om måneden på Instagram og lån et ekstra stykke tøj om
-    måneden.
-  </p>
+  <!-- <div class="ambassador-image">
+    <img src="billeder/kampagne1.webp" alt="Ambassadør med tøj" />
+  </div> -->
 
+  <div class="tekst">
+    <p>Til dig der allerede er medlem!</p>
+    <p>Få en unik mulighed og bliv en af vores 50 ambassadører.</p>
+    <p>
+      Tag os på to post om måneden på Instagram og lån et ekstra stykke tøj om
+      måneden.
+    </p>
+  </div>
   <div class="instagram-link">
-    <span class="icon">📷</span>
-    <!-- du kan erstatte dette med et SVG-ikon -->
-    <a href="https://instagram.com" target="_blank">Se mere på instagram</a>
+    <a href="https://www.instagram.com/anothercloset.dk/" target="_blank"
+      ><img src="logo/instagram.svg" class="icon" alt="" /> Se mere på instagram</a
+    >
   </div>
 
   <button class="join-button">MELD DIG TIL HER</button>
 </section>
 
 <style>
+  .polaroid-wrapper {
+    margin-left: 2rem;
+    position: relative;
+    width: 400px;
+    height: 500px;
+  }
+
+  .polaroid {
+    position: absolute;
+    width: 250px;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    transform-origin: center center;
+    transition: transform 0.3s;
+  }
+
+  .polaroid img {
+    width: 100%;
+    display: block;
+  }
+
+  .polaroid:first-child {
+    top: 30px;
+    left: 0;
+    transform: rotate(-8deg);
+    z-index: 2;
+  }
+
+  .polaroid:last-child {
+    top: 0;
+    left: 90px;
+    transform: rotate(6deg);
+    z-index: 1;
+  }
+
+  .polaroid:hover {
+    transform: scale(1.05);
+    z-index: 3;
+  }
+
   .ambassador-section {
-    max-width: 500px;
     margin: 0 auto;
     text-align: center;
-    font-family: "Helvetica Neue", sans-serif;
     padding: 2rem 1rem;
-    background-color: #f7f5f1;
-    color: #4e3a26;
+    background-color: var(--beige);
   }
 
   .ambassador-section h2 {
-    font-size: 1.8rem;
     margin-bottom: 1.5rem;
     font-weight: bold;
+    color: var(--brown);
   }
 
   .ambassador-image img {
     max-width: 60%;
-    border: 10px solid #f2f2eb; /* polaroid-look */
+    border: 10px solid white;
+    border-bottom: 40px solid white;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
     transform: rotate(-3deg);
     margin-bottom: 1.5rem;
@@ -50,39 +102,110 @@
     line-height: 1.6;
     margin-bottom: 1rem;
     color: #000;
+    padding: 0px 20px;
+    text-align: left;
+  }
+  .tekst {
+    margin-top: -5rem;
   }
 
   .instagram-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 0.5rem;
     margin-bottom: 2rem;
     font-weight: 500;
     font-size: 1rem;
   }
 
-  .instagram-link .icon {
-    font-size: 1.2rem;
+  img.icon {
+    margin: -7px;
+    margin-right: 2px;
   }
 
   .instagram-link a {
     color: #000;
     text-decoration: none;
   }
-
+  .instagram-link :hover {
+    text-decoration: underline;
+    font-weight: normal;
+    transform: translateY(-2px);
+  }
   .join-button {
     background: white;
     border: none;
-    padding: 1rem 2rem;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 12px 20px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s ease;
   }
 
   .join-button:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
+  }
+  @media (min-width: 800px) {
+    .ambassador-section {
+      padding: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .ambassador-section > :nth-child(2) {
+      grid-column: 1;
+      grid-row: 1 / 5;
+    }
+    .overskrift {
+      text-align: left;
+      font-size: larger;
+    }
+    .tekst p {
+      font-size: x-large;
+    }
+    .tekst {
+      margin-top: 2rem;
+    }
+    .join-button {
+      width: 60%;
+      height: 130%;
+      margin-left: 1rem;
+    }
+    .instagram-link {
+      display: flex;
+      font-size: 1.5rem;
+      margin-left: 2rem;
+    }
+    img.icon {
+      width: 2rem;
+    }
+    .polaroid-wrapper {
+      margin-top: 5rem;
+    }
+  }
+  @media (min-width: 1100px) {
+    .polaroid:last-child {
+      left: 200px;
+    }
+    .polaroid {
+      width: 300px;
+    }
+    .overskrift {
+      text-align: left;
+      font-size: xx-large;
+    }
+    .tekst p {
+      font-size: xx-large;
+    }
+    .instagram-link {
+      font-size: 2rem;
+      margin-left: 3rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    img.icon {
+      width: 3rem;
+    }
+    .join-button {
+      font-size: larger;
+    }
   }
 </style>

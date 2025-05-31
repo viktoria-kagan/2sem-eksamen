@@ -11,64 +11,114 @@
   </div>
 
   <div class="dress-gallery">
-    <img src="billeder-kopi/grøn_front.webp" alt="Grøn kjole" />
-    <img src="billeder-kopi/gul_front.webp" alt="Gul kjole" />
-    <img src="billeder-kopi/glimmer_front.webp" alt="Sølv kjole" />
-    <img src="billeder-kopi/rød_front.webp" alt="Bordeaux kjole" />
+    <img src="billeder/grøn_front.webp" alt="Grøn kjole" />
+    <img src="billeder/gul_front.webp" alt="Gul kjole" />
+    <img src="billeder/glimmer_front.webp" alt="Sølv kjole" />
+    <img src="billeder/rød_front.webp" alt="Bordeaux kjole" />
   </div>
 
-  <button class="see-all-button">SE ALLE KJOLER HER</button>
+  <a href="#" class="see-all-button">SE ALLE KJOLER HER</a>
 </section>
-
 <style>
   .dress-rental {
-    max-width: 600px;
     margin: 0 auto;
     padding: 2rem 1rem;
-    font-family: "Helvetica Neue", sans-serif;
     text-align: center;
-    color: #3b2b1c; /* brunlig tone */
+    color: var(--brown);
   }
 
   .dress-rental h2 {
     font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: left;
+    margin-left: 2rem;
   }
 
   .dress-rental .text-content p {
     text-align: left;
     font-size: 1rem;
     line-height: 1.6;
-    margin: 0.5rem 0;
+    margin-left: 2rem;
     color: #000;
   }
 
   .dress-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin: 2rem 0;
+    gap: 2rem;
+    margin: 1rem 0;
+    padding: 10px 20px;
   }
 
   .dress-gallery img {
     width: 100%;
-    border: 10px solid #f0eee8; /* polaroid-stil */
+    border: 10px solid var(--beige);
+    border-bottom: 40px solid var(--beige);
     box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .see-all-button {
-    background-color: #f0eee8;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    background-color: var(--beige);
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 4px;
+    text-decoration: none;
     font-weight: bold;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
     cursor: pointer;
-    transition: transform 0.2s ease;
   }
 
   .see-all-button:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
+  }
+
+  @media (min-width: 800px) {
+    .dress-rental {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 4rem;
+    }
+    .dress-gallery {
+      max-width: 80%;
+    }
+    .dress-rental > :nth-child(2) {
+      grid-row: span 2;
+    }
+    .dress-rental h2 {
+      font-size: xx-large;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .dress-rental .text-content p {
+      font-size: x-large;
+    }
+    .see-all-button {
+      font-size: larger;
+      padding: 1rem;
+      max-width: 15rem;
+      max-height: 4rem;
+      margin-left: 10%;
+    }
+  }
+  @media (min-width: 1100px) {
+    .dress-rental h2 {
+      font-size: xxx-large;
+    }
+    .dress-rental .text-content p {
+      font-size: xx-large;
+    }
+    .see-all-button {
+      font-size: x-large;
+      padding: 1.5rem;
+      max-width: 20rem;
+      max-height: 5rem;
+      margin-left: 10%;
+    }
+    .dress-gallery {
+      max-width: 70%;
+    }
   }
 </style>

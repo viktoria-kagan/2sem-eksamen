@@ -1,36 +1,26 @@
 ---
-import Closets from "../components/Closets.astro";
-import Burgermenu from "../components/Burgermenu.astro";
 import Sektion1 from "../components/Sektion1.astro";
 import Sektion2 from "../components/Sektion2.astro";
 import Sektion3 from "../components/Sektion3.astro";
 import Sektion4 from "../components/Sektion4.astro";
 import Sektion5 from "../components/Sektion5.astro";
-import Footer from "../components/Footer.astro";
 
 import Layout from "../layouts/Layout.astro";
-const data = await fetch(
-  "https://fruuiyihpenjgolbdeyc.supabase.co/rest/v1/products?select=*",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZydXVpeWlocGVuamdvbGJkZXljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjk3MzYsImV4cCI6MjA1OTg0NTczNn0.mprUmmwcPKbraQs_3YsBjAow4FzM_Hu0SjEVSkdeI0w",
-    },
-  }
-).then((res) => res.json());
-console.log(data);
 ---
 
-<!-- <section class="closets">
-	{data.map((closet) => {return<Closets/>;})}
-</section> -->
 <Layout>
-  <Burgermenu />
+  <script
+    src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+    type="module"></script>
+  <dotlottie-player
+    src="https://lottie.host/ac6d3a8b-1f45-4da2-b966-f65153529ff4/oJGew1CKcx.lottie"
+    background="transparent"
+    speed="1"
+    style="width: auto; height: auto; margin-top: 1rem; margin-bottom: 1rem; z-index: -1;"
+    autoplay></dotlottie-player>
   <Sektion1 />
   <Sektion2 />
   <Sektion3 />
   <Sektion4 />
   <Sektion5 />
-  <!-- <Footer /> -->
 </Layout>

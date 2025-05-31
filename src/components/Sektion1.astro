@@ -1,8 +1,21 @@
-<section class="how-it-works">
-  <h2>Dele-tøj på abonnement!<br />Sådan fungerer det?</h2>
+<div class="scrolling-banner">
+  <a href="../#ambassador-section" target="_blank"
+    ><div class="scrolling-text">
+      <p>
+        BLIV EN AF ANOTHER CLOSETS 50 NYE AMBASSADØRER • Post 2 billeder på
+        Instagram hver måned og lån et ekstra stykke tøj om måneden •
+      </p>
+    </div>
+  </a>
+</div>
 
+<section class="how-it-works">
+  <div class="overskrift">
+    <h1>Dele-tøj på abonnement</h1>
+    <h2>Sådan fungerer det</h2>
+  </div>
   <div class="how-it-works-image">
-    <img src="/public/billeder/" alt="Kvinde vælger jakke" />
+    <img src="billeder/how-to.webp" alt="Kvinde vælger jakke" />
   </div>
 
   <div class="steps">
@@ -27,22 +40,18 @@
 <style>
   .how-it-works {
     text-align: center;
-    color: #4e3a26; /* Brun farve */
+    color: var(--brown);
     padding: 2rem 1rem;
-    max-width: 700px;
     margin: 0 auto;
   }
-
-  .how-it-works h2 {
-    font-size: 2rem;
+  .overskrift {
     margin-bottom: 1.5rem;
-    font-weight: bold;
   }
 
   .how-it-works-image img {
     max-width: 60%;
-    border: 20px solid #f4f4f0; /* simulerer polaroid ramme */
-    border-bottom: 40px solid #f4f4f0; /* simulerer polaroid ramme */
+    border: 10px solid var(--beige);
+    border-bottom: 40px solid var(--beige);
 
     margin-bottom: 2rem;
   }
@@ -50,7 +59,8 @@
   .steps {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 1.5rem;
+    gap: 2rem 1rem;
+    padding: 0px 20px;
   }
 
   .step-number {
@@ -64,5 +74,89 @@
     margin: 0;
     font-size: 1rem;
     line-height: 1.4;
+  }
+  .scrolling-banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--brown);
+    white-space: nowrap;
+    height: 3rem;
+  }
+
+  .scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 30s linear infinite;
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @media (min-width: 800px) {
+    .scrolling-banner {
+      height: 4rem;
+    }
+    .scrolling-text {
+      font-size: 2rem;
+    }
+    .how-it-works {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 4rem;
+    }
+    .how-it-works > :nth-child(2) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .how-it-works > :nth-child(1) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .how-it-works > :nth-child(3) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .steps {
+      margin-top: -25rem;
+    }
+
+    .step p {
+      font-size: larger;
+    }
+    .step-number {
+      font-size: 2rem;
+    }
+
+    .overskrift {
+      font-size: x-large;
+      margin-bottom: 2rem;
+    }
+    .how-it-works-image img {
+      max-width: 80%;
+    }
+  }
+  @media (min-width: 1100px) {
+    .overskrift {
+      font-size: xx-large;
+    }
+    .step p {
+      font-size: xx-large;
+    }
+    .step-number {
+      font-size: 4rem;
+    }
+    .steps {
+      margin-top: -40rem;
+    }
   }
 </style>
