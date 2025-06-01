@@ -121,10 +121,11 @@ const relatedProducts = allProducts.filter(
     text-decoration: underline;
   }
   .product-section {
+    margin-top: 2rem;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    padding-bottom: 25rem;
+    padding-bottom: 22rem;
   }
 
   .image-column {
@@ -179,6 +180,17 @@ const relatedProducts = allProducts.filter(
     font-size: 1rem;
   }
   @media (min-width: 700px) {
+    .product-section {
+      margin-top: 4rem;
+    }
+    .navigation1 {
+      margin-left: 2rem;
+      font-size: 20px;
+      margin-bottom: 2rem;
+    }
+    .back {
+      width: 8px;
+    }
     .info-column {
       margin-left: 32rem;
       font-size: larger;
@@ -232,15 +244,6 @@ const relatedProducts = allProducts.filter(
     }
   }
   @media (min-width: 800px) {
-    .navigation1 {
-      margin-left: 2rem;
-      font-size: 20px;
-      margin-bottom: 2rem;
-    }
-    .back {
-      width: 8px;
-    }
-
     .comment-section {
       margin-top: 50px;
     }
