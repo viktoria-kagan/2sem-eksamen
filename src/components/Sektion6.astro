@@ -1,5 +1,7 @@
 <section class="event-intro">
-  <a href="/" class="back-link"> <img src="logo/pil.svg" alt="" /> Forside</a>
+  <a href="/" class="back-link">
+    <img src="logo/pil.svg" class="back" alt="" /> Forside</a
+  >
 
   <div class="event-content">
     <div class="event-image">
@@ -85,6 +87,14 @@
     font-weight: bold;
   }
   @media (min-width: 800px) {
+    .back-link {
+      font-size: 20px;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+    }
+    .back {
+      width: 8px;
+    }
     .event-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -103,6 +113,14 @@
     }
   }
   @media (min-width: 1100px) {
+    .back-link {
+      font-size: 25px;
+      margin-left: 4rem;
+      margin-bottom: 4rem;
+    }
+    .back {
+      width: 10px;
+    }
     .event-image {
       margin-left: 6rem;
       width: 70%;
