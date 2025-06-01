@@ -16,9 +16,10 @@
   </div> -->
 
   <div class="tekst">
-    <p>Til dig der allerede er medlem!</p>
-    <p>Få en unik mulighed og bliv en af vores 50 ambassadører.</p>
     <p>
+      Til dig der allerede er medlem!<br />
+      Få en unik mulighed og bliv en af vores 50 ambassadører.<br />
+
       Tag os på to post om måneden på Instagram og lån et ekstra stykke tøj om
       måneden.
     </p>
@@ -36,14 +37,14 @@
   .polaroid-wrapper {
     margin-left: 2rem;
     position: relative;
-    width: 400px;
-    height: 500px;
+    /* height: 60vw; */
   }
 
   .polaroid {
     position: absolute;
-    width: 250px;
-    padding: 10px;
+    width: 50%;
+    padding: 8px;
+    padding-bottom: 20px;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 1px solid #ddd;
@@ -89,7 +90,6 @@
   }
 
   .ambassador-image img {
-    max-width: 60%;
     border: 10px solid white;
     border-bottom: 40px solid white;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
@@ -99,10 +99,11 @@
 
   .ambassador-section p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 2;
     margin-bottom: 1rem;
     color: #000;
     padding: 0px 20px;
+    padding-top: 100vw;
     text-align: left;
   }
   .tekst {
@@ -137,33 +138,36 @@
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .join-button:hover {
     transition: all 0.3s ease;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
   }
-  @media (min-width: 800px) {
+  .join-button:active {
+    background-color: black;
+    color: white;
+  }
+
+  @media (min-width: 600px) {
+    .overskrift {
+      text-align: left;
+    }
     .ambassador-section {
       padding: 4rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+    .ambassador-section p {
+      padding-top: 4rem;
+    }
     .ambassador-section > :nth-child(2) {
       grid-column: 1;
       grid-row: 1 / 5;
     }
-    .overskrift {
-      text-align: left;
-      font-size: larger;
-    }
-    .tekst p {
-      font-size: x-large;
-    }
-    .tekst {
-      margin-top: 2rem;
-    }
+
     .join-button {
       width: 60%;
       height: 130%;
@@ -179,6 +183,16 @@
     }
     .polaroid-wrapper {
       margin-top: 5rem;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .overskrift {
+      text-align: left;
+      font-size: larger;
+    }
+    .tekst p {
+      font-size: x-large;
     }
   }
   @media (min-width: 1100px) {
