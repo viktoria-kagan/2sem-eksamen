@@ -1,9 +1,7 @@
 <nav class="navbar">
-  <a href="http://"></a><img
-    src="../../logo/logo.webp"
-    class="logo"
-    alt="Logo"
-  />
+  <a href="../../">
+    <img src="../../logo/logo.webp" class="logo" alt="Logo" /></a
+  >
   <div class="burgermenu">
     <div class="menu-toggle" id="menu-toggle">
       <div class="bar"></div>
@@ -34,15 +32,12 @@
   .logo {
     width: 40%;
     height: auto;
-    /* margin-left: 30%; */
   }
-  .burgermenu {
-  }
+
   .navbar {
     display: flex;
     position: relative;
     padding: 1rem;
-    text-align: right;
     justify-content: space-between;
   }
 
@@ -61,7 +56,10 @@
     margin: 5px 0;
     transition: 0.3s;
   }
-
+  #menu {
+    margin-left: -25rem;
+    margin-top: 1rem;
+  }
   .menu {
     list-style: none;
     padding: 0;
